@@ -280,3 +280,21 @@ export function customFormSelect() {
 		inputField.addEventListener("focus", clearInput);
 	});
 }
+
+export function honeyPot() {
+	const forms = document.querySelectorAll("form");
+	if (!forms.length) return;
+
+	forms.forEach((form) => {
+		const honeypotInput = form.querySelector('[data-medus="input"]');
+		const submit = form.querySelector('input[type="submit"]');
+
+		if (!honeypotInput || !submit) return;
+		honeypotInput.oninput = function () {
+			if (honeypotInput.value.length > 0) {
+				console.log("honey activated");
+				submit.disabled = true;
+			}
+		};
+	});
+}

@@ -29,7 +29,7 @@ import {
 	accordionSyncImagesSlider,
 } from "./modules/sliders.js";
 import { customCursorAnimation } from "./modules/cursor.js";
-import { customFormValidation, quoteFormQtyInput, formUTMparameters, formPageField, customFormSelect } from "./modules/forms.js";
+import { customFormValidation, quoteFormQtyInput, formUTMparameters, formPageField, customFormSelect, honeyPot } from "./modules/forms.js";
 import { cookiesPopup } from "./modules/cookies.js";
 import {
 	dottedBoothPin,
@@ -689,6 +689,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	soundFeaturesSlider();
 	imageParallaxAnimation();
 	accordionSyncImagesSlider();
+	honeyPot();
 	setTimeout(() => {
 		ScrollTrigger.sort();
 		ScrollTrigger.refresh();
